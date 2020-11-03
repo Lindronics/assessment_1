@@ -7,8 +7,12 @@ public class TextAndImageNote extends Note {
     private URL imageURL;
 
     public TextAndImageNote(String text, URL imageURL) {
-        super(text);
+        this.text = text;
         this.imageURL = imageURL;
     }
     
+    @Override
+    public String toString() {
+        return text + ", " + imageURL;
+    }
 }
