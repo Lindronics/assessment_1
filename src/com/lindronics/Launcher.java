@@ -3,7 +3,7 @@ package com.lindronics;
 public class Launcher {
 
     public static void main(String... args) {
-        
+
         var noteStore = new NoteStore();
         noteStore.storeNote("Lorem impsum dolor.");
         noteStore.storeNote("This is a random test note.");
@@ -15,6 +15,7 @@ public class Launcher {
 
     /**
      * Enumerates and displays all text notes, followed by all text and image notes.
+     * 
      * @param noteStore Note store containing all notes.
      */
     public static void displayTextAndImageNotes(NoteStore noteStore) {

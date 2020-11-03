@@ -15,7 +15,7 @@ public class NoteStore {
     private List<Note> notes = new ArrayList<Note>();
 
     /**
-     * Stores a new {@link com.lindronics.TextNote}.
+     * Stores a new {@link com.lindronics.notes.TextNote}.
      * 
      * @param message Note text
      */
@@ -24,8 +24,8 @@ public class NoteStore {
     }
 
     /**
-     * Stores a new {@link com.lindronics.TextAndImageNote}. Will only work if URL
-     * is well-formed.
+     * Stores a new {@link com.lindronics.notes.TextAndImageNote}. Will only work if
+     * URL is well-formed.
      * 
      * @param message  Note text
      * @param imageURL URL string to the image
@@ -39,14 +39,15 @@ public class NoteStore {
     }
 
     /**
-     * @return every {@link com.lindronics.TextNote} stored in the list.
+     * @return every {@link com.lindronics.notes.TextNote} stored in the list.
      */
     public List<Note> getAllTextNotes() {
         return notes.stream().filter(n -> (n instanceof TextNote)).collect(Collectors.toList());
     }
 
     /**
-     * @return every {@link com.lindronics.TextAndImageNote} stored in the list.
+     * @return every {@link com.lindronics.notes.TextAndImageNote} stored in the
+     *         list.
      */
     public List<Note> getAllTextAndImageNotes() {
         return notes.stream().filter(n -> (n instanceof TextAndImageNote)).collect(Collectors.toList());

@@ -10,7 +10,7 @@ public class TextAndImageNote extends Note {
         this.text = text;
         this.imageURL = imageURL;
     }
-    
+
     @Override
     public String toString() {
         return text + ", " + imageURL;
